@@ -21,15 +21,16 @@
     font-size: 18px;
     font-family: $fontPoppins;
     font-weight: 600;
-    line-height: 27px;
     color: $fontColor;
   }
   h2 {
     font-size: 50px;
     font-family: $fontPoppins;
-    line-height: 67px;
     font-weight: bold;
     color: $darkBlueColorAlt;
+    @include media-max($sm) {
+      font-size: 40px;
+    }
   }
 }
 
@@ -39,6 +40,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-max($sm) {
+      flex-wrap: wrap;
+    }
     li {
       cursor: pointer;
       transition: 0.5s;
@@ -57,6 +61,20 @@
       &.active {
         background-color: $ActiveBgBtnShuffleColor;
         color: #fff;
+      }
+
+      @include media-max($lg) {
+        padding: 5px 20px;
+        border-radius: 6px;
+      }
+      @include media-max($md) {
+        margin-right: 10px;
+        font-size: 14px;
+        padding: 3px 10px;
+        border-radius: 4px;
+      }
+      @include media-max($sm) {
+        margin-bottom: 10px;
       }
     }
   }
@@ -107,6 +125,21 @@
   }
 }
 
+.media-items {
+  > .row.g-5 {
+    > div {
+      @include media-max($lg) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      @include media-max($sm) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
 .media-item {
   background-color: #fff;
   box-shadow: 0 16px 26px rgba($color: #000000, $alpha: 16%);
@@ -114,7 +147,20 @@
   .media-img {
     height: 370px;
     overflow: hidden;
+    @include media-max($xxl) {
+      height: 340px;
+    }
+    @include media-max($xl) {
+      height: 280px;
+    }
+    @include media-max($lg) {
+      height: 236px;
+    }
+    @include media-max($sm) {
+      height: 370px;
+    }
     img {
+      width: 100%;
     }
   }
   .media-txt {
@@ -129,6 +175,9 @@
       display: block;
       height: 70px;
       overflow: hidden;
+      @include media-max($sm) {
+        font-size: 16px;
+      }
     }
 
     .date {

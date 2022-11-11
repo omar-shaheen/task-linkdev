@@ -11,16 +11,44 @@
     justify-content: space-between;
   }
 
+  .logo {
+    img {
+      max-height: 50px;
+    }
+  }
+  @include media-max($md) {
+    .logo img {
+      max-height: 40px;
+    }
+  }
+  @include media-max($xs) {
+    .logo img {
+      max-height: 30px;
+    }
+  }
+
   nav {
     ul {
       display: flex;
       align-items: center;
+      @include media-max($lg) {
+        display: block;
+      }
       li {
         a {
           font-size: 17px;
           margin-right: 40px;
           color: $linksColor;
           font-weight: 500;
+          @include media-max($xl) {
+            margin-right: 20px;
+          }
+          @include media-max($lg) {
+            display: block;
+            color: #fff;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+          }
           &:hover {
             color: $orangeColor;
           }
@@ -28,6 +56,32 @@
         li::last-child a {
           margin-right: 0;
         }
+      }
+    }
+
+    .close-menu-mobile {
+      display: none;
+    }
+    @include media-max($lg) {
+      .close-menu-mobile {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 40px;
+      }
+      position: fixed;
+      top: 0;
+      left: -300px;
+      background-color: $linksColor;
+      height: 100%;
+      width: 300px;
+      padding: 5rem 1rem;
+      z-index: 9999;
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      &.showing {
+        left: 0;
       }
     }
   }
@@ -39,19 +93,41 @@
       font-size: 17px;
       margin-right: 40px;
       color: $linksColor;
+      @include media-max($md) {
+        font-size: 14px;
+      }
+      @include media-max($xs) {
+        font-size: 12px;
+      }
+
+      @include media-max($md) {
+        margin-right: 10px;
+      }
       &:hover {
         color: $orangeColor;
       }
       &.btn-signup {
         border: 1px solid $linksColor;
-        padding: .5rem 1.3rem;
+        padding: 0.5rem 1.3rem;
         border-radius: 5px;
+        @include media-max($md) {
+          padding: 0.2rem 0.5rem;
+        }
         &:hover {
           background-color: $orangeColor;
           color: #fff;
           border-color: $orangeColor;
           transform: scale(1.01) translateY(-2px);
         }
+      }
+    }
+    .toggle-menu-mobile {
+      @include media-max($lg) {
+        display: block !important;
+        font-size: 40px;
+      }
+      @include media-max($xs) {
+        font-size: 26px;
       }
     }
   }

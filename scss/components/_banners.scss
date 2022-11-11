@@ -25,12 +25,19 @@
         max-width: 50%;
         flex: 0 0 50%;
         padding-left: 15px;
+        @include media-max($lg) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
         h5 {
           font-size: 20px;
           font-family: $fontPoppins;
           font-weight: 700;
           text-transform: uppercase;
           margin-bottom: 40px;
+          @include media-max($lg) {
+            margin-bottom: 20px;
+          }
           &.purple-color {
             color: $purpleColor;
           }
@@ -50,6 +57,9 @@
             top: 50px;
             z-index: -1;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            @include media-max($lg) {
+              width: 60%;
+            }
           }
           h2 {
             font-family: $fontPoppins;
@@ -60,6 +70,14 @@
             white-space: wrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include media-max($lg) {
+              font-size: 55px;
+              height: 122px;
+            }
+            @include media-max($sm) {
+              font-size: 35px;
+              height: 76px;
+            }
           }
         }
         p {
@@ -69,6 +87,11 @@
           line-height: 34px;
           font-weight: 400;
           margin-bottom: 40px;
+          @include media-max($sm) {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 20px;
+          }
         }
         .btns-call-actions {
           display: flex;
@@ -90,6 +113,15 @@
             &:hover {
               transform: scale(1.01) translateY(-2px);
             }
+            @include media-max($sm) {
+              font-size: 13px;
+              padding: 0.8rem 0.7rem;
+              margin-right: 24px;
+            }
+            @include media-max($xs) {
+              font-size: 11px;
+              padding: 0.8rem 0.5rem;
+            }
           }
           .btn-play-demo {
             display: flex;
@@ -98,6 +130,11 @@
             font-family: $fontPoppins;
             font-weight: 500;
             font-size: 17px;
+            @include media-max($sm) {
+              font-size: 14px;
+              color: #333;
+              font-weight: bold;
+            }
 
             .icon {
               margin-right: 10px;
@@ -109,6 +146,11 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              @include media-max($sm) {
+                margin-right: 8px;
+                width: 40px;
+                height: 40px;
+              }
             }
             &:hover {
               transform: scale(1.01) translateY(-2px);
@@ -123,6 +165,14 @@
         display: flex;
         align-items: end;
         justify-content: start;
+        @include media-max($lg) {
+          max-width: 100%;
+          flex: 0 0 100%;
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          opacity: 0.4;
+        }
         img {
           // height: 85%;
           max-width: 100%;
@@ -130,7 +180,7 @@
         }
       }
     }
-    
+
     &.swiper-slide-active .decore-title-banner {
       // width: 100% !important;
     }
@@ -138,7 +188,6 @@
     &.swiper-slide-active img {
       transform: translate(50px, -0px);
     }
-  
   }
 }
 
@@ -151,15 +200,27 @@
   }
 }
 
+.sw_pagination {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media-max($sm) {
+    left: 50%;
+    transform: translateX(-15%);
+  }
+  @include media-max($xs) {
+    transform: translateX(-25%);
+  }
+}
 .swiper-wrapper {
   .swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets {
     position: absolute;
-    bottom: 50px;
-    left: 340px;
+    bottom: 0;
+    left: 0;
     width: auto;
     text-align: initial;
     transition: 0.3s opacity;
-    transform: initial;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -181,6 +242,12 @@
       opacity: 1;
       transition: all 0.2s ease-in-out;
       position: relative;
+
+      @include media-max($sm) {
+        width: 30px;
+        height: 30px;
+        margin-right: 40px;
+      }
 
       &:last-child::after {
         content: none;

@@ -114,3 +114,27 @@ btnShowShare.forEach((btn) => {
   });
 });
 
+// Define Overlay For All
+let bodyOverlay = document.querySelector("body");
+let divBG = document.createElement("div");
+divBG.className = "overlay-bg";
+bodyOverlay.appendChild(divBG);
+
+// Toggle toggle Header Menu
+const toggleMenuMobile = document.querySelector(".toggle-menu-mobile");
+const headerNavMenu = document.querySelector(".main-header nav");
+const closeMenuMobile = document.querySelector(".close-menu-mobile");
+
+if ((toggleMenuMobile, divBG, closeMenuMobile)) {
+  toggleMenuMobile.addEventListener("click", toggleMenuNav, { passive: true });
+  divBG.addEventListener("click", closeMenuNav, { passive: true });
+  closeMenuMobile.addEventListener("click", closeMenuNav, { passive: true });
+}
+function toggleMenuNav() {
+  headerNavMenu.classList.add("showing");
+  divBG.className = "overlay-bg showing";
+}
+function closeMenuNav() {
+  headerNavMenu.classList.remove("showing");
+  divBG.classList.remove("showing");
+}
