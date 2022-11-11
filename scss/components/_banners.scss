@@ -43,8 +43,12 @@
         }
         .slide-title {
           margin-bottom: 40px;
-          svg {
-            display: none;
+          position: relative;
+          svg.decore-title-banner {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            z-index: -1;
           }
           h2 {
             font-family: $fontPoppins;
