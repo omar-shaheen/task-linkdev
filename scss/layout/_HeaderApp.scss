@@ -1,0 +1,46 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  padding-top: 1.5rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        a {
+          font-size: 17px;
+          margin-right: 40px;
+          color: $linksColor;
+          font-weight: 500;
+        }
+        li::last-child a {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .right-actions {
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 17px;
+      margin-right: 40px;
+      color: $linksColor;
+      &.btn-signup {
+        border: 1px solid $linksColor;
+        padding: .5rem 1.3rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}

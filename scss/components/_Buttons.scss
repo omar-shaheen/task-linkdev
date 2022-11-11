@@ -1,0 +1,13 @@
+.btn-more {
+  padding: 20px 100px;
+  color: #fff;
+  background-color: $orangeColor;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: $fontOpenSans;
+  &:hover {
+    color: #fff;
+    transform: scale(1.01) translateY(-5px);
+  }
+}

@@ -1,0 +1,27 @@
+.lines-1,
+.lines-2,
+.lines-3,
+.lines-4,
+.lines-5,
+.lines-6,
+.lines-7,
+.lines-8,
+.lines-9,
+.lines-10,
+.lines-11,
+.lines-12,
+.lines-13,
+.lines-14,
+.lines-15 {
+  display: -webkit-box !important;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+$lines: 15;
+
+@for $i from 1 through $lines {
+  .lines-#{$i} {
+    -webkit-line-clamp: $i;
+  }
+}
