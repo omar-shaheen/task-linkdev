@@ -21,6 +21,9 @@
           margin-right: 40px;
           color: $linksColor;
           font-weight: 500;
+          &:hover {
+            color: $orangeColor;
+          }
         }
         li::last-child a {
           margin-right: 0;
@@ -36,10 +39,19 @@
       font-size: 17px;
       margin-right: 40px;
       color: $linksColor;
+      &:hover {
+        color: $orangeColor;
+      }
       &.btn-signup {
         border: 1px solid $linksColor;
         padding: .5rem 1.3rem;
         border-radius: 5px;
+        &:hover {
+          background-color: $orangeColor;
+          color: #fff;
+          border-color: $orangeColor;
+          transform: scale(1.01) translateY(-2px);
+        }
       }
     }
   }

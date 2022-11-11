@@ -86,13 +86,13 @@ var swiper = new Swiper(".banner-slider", {
   },
 });
 
-let buliltsBanner = document.querySelectorAll(
-  ".swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets span"
-);
-buliltsBanner.forEach((el) => {
-  // console.log(el);
-  el.insertAdjacentHTML("afterend", '<b class="dots-builts"></b>');
-});
+// let buliltsBanner = document.querySelectorAll(
+//   ".swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets span"
+// );
+// buliltsBanner.forEach((el) => {
+//   // console.log(el);
+//   el.insertAdjacentHTML("afterend", '<b class="dots-builts"></b>');
+// });
 
 let addToFavorite = document.querySelectorAll(".add-to-favorite");
 if (addToFavorite) {
