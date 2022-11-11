@@ -10,4 +10,10 @@
     color: #fff;
     transform: scale(1.01) translateY(-5px);
   }
+
+  @include media-max($md) {
+    padding: 10px 40px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
 }

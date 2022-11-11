@@ -13,22 +13,51 @@ footer {
     z-index: -1;
     width: 340px;
     height: 340px;
-    opacity: .9;
+    opacity: 0.9;
     box-shadow: 0 0 467px rgb(224 144 255);
     border-radius: 50%;
   }
 
-  .row {
-    > div {
-      max-width: calc(100% / 5);
-      flex: 0 0 calc(100% / 5);
-      padding-left: 2rem;
+  .logo-footer {
+    max-height: 50px;
+  }
+
+  .row-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 0px;
+    @include media-max($xl) {
+      grid-column-gap: 30px;
+    }
+
+    @include media-max($md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 20px;
+    }
+
+    .col-grid {
+      grid-area: 2;
+      @include media-max($md) {
+        grid-area: auto;
+
+        border-bottom: 1px solid #ddd;
+        padding-bottom: .5rem;
+      }
     }
   }
+
   p {
     color: $fontColor;
     font-size: 13px;
     font-weight: 600;
+    @include media-max($lg) {
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 
   h4 {
@@ -36,15 +65,33 @@ footer {
     font-size: 21px;
     font-weight: bold;
     margin-bottom: 32px;
+    @include media-max($lg) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    @include media-max($md) {
+      font-size: 26px;
+    }
   }
   ul {
+    @include media-max($md) {
+      display: flex;
+      column-gap: 30px;
+      flex-wrap: wrap;
+    }
     li {
       margin-bottom: 13px;
+      @include media-max($lg) {
+        margin-bottom: 12px;
+      }
       a {
         color: $fontColor;
         font-size: 18px;
         font-weight: 600;
         display: block;
+        @include media-max($lg) {
+          font-size: 14px;
+        }
         &:hover {
           color: $orangeColor;
         }
@@ -55,6 +102,9 @@ footer {
   h5 {
     color: $fontColor;
     margin-bottom: 16px;
+    @include media-max($lg) {
+      font-size: 16px;
+    }
   }
 
   .social-footer {
@@ -72,8 +122,34 @@ footer {
       align-items: center;
       justify-content: center;
       box-shadow: 0 2px 20px rgba($color: #000000, $alpha: 0.1);
+      @include media-max($lg) {
+        width: 30px;
+        height: 30px;
+        svg {
+          width: 12px;
+        }
+      }
       &:first-child {
         margin: 0;
+      }
+    }
+  }
+  .apps-links {
+    display: flex;
+    @include media-max($md) {
+      // display: block;
+    }
+    a {
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include media-max($md) {
+        // display: block;
+        // margin-bottom: .5rem;
+      }
+      img {
+        width: 100%;
       }
     }
   }
