@@ -43,11 +43,11 @@
 
   .bg-transform {
     background-color: $purpleColor;
-    height: 87%;
+    height: 80%;
     width: 155%;
     position: absolute;
     right: -190px;
-    top: 50px;
+    top: 130px;
     transform: skewX(-25deg);
     z-index: 0;
     @include media-max($xxll) {
@@ -75,7 +75,7 @@
     }
   }
   .txt-content {
-    padding: 150px 80px 120px 20px;
+    padding: 250px 80px 120px 20px;
     position: relative;
     z-index: 1;
     @include media-max($xl) {
