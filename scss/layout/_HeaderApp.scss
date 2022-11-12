@@ -53,7 +53,7 @@
             color: $orangeColor;
           }
         }
-        li::last-child a {
+        li:last-child a {
           margin-right: 0;
         }
       }
