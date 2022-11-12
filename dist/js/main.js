@@ -65,9 +65,9 @@ function closeMenuNav() {
 
 var mixer = mixitup(".mixing", {
   selectors: {
-      target: '.mix'
+    target: ".mix",
   },
   animation: {
-      duration: 300
-  }
+    duration: 300,
+  },
 });

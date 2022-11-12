@@ -45,7 +45,7 @@ footer {
         grid-area: auto;
 
         border-bottom: 1px solid #ddd;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
       }
     }
   }
@@ -60,7 +60,8 @@ footer {
     }
   }
 
-  h4 {
+  .footer-title {
+    display: block;
     color: $blackColor;
     font-size: 21px;
     font-weight: bold;
@@ -99,7 +100,8 @@ footer {
     }
   }
 
-  h5 {
+  strong {
+    display: block;
     color: $fontColor;
     margin-bottom: 16px;
     @include media-max($lg) {
