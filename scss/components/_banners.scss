@@ -4,8 +4,12 @@
     height: 85vh;
   }
 
-  @media (max-width: 1024px) and (max-height: 1366px) {
+  @media (height: 1366px) {
     height: 70vh;
+  }
+
+  @media (max-width: 1024px) and (max-height: 800px) {
+    height: 90vh;
   }
 
   @media (max-width: 580px) and (max-height: 900px) {
@@ -229,8 +233,15 @@
           transition: all 0.4s linear;
           height: 93%;
           position: relative;
+          @include media-max($xxl) {
+            height: auto;
+            width: 100%;
+          }
           @include media-max($xl) {
             height: 80%;
+          }
+          @media (min-width: 1024px) and (max-height: 1366px) {
+            height: auto;
           }
           @include media-max($md) {
             height: auto;
@@ -275,7 +286,7 @@
   .swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 20px;
     width: auto;
     text-align: initial;
     transition: 0.3s opacity;

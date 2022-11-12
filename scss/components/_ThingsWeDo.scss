@@ -50,11 +50,19 @@
     top: 50px;
     transform: skewX(-25deg);
     z-index: 0;
-    @include media-max($xxl) {
+    @include media-max($xxll) {
       width: 180%;
+      height: 75%;
+      position: absolute;
+      right: -190px;
+      top: 120px;
     }
     @include media-max($xl) {
-      height: 80%;
+      height: 70%;
+      top: 100px;
+    }
+    @media (max-width: 1024px) and (max-height: 800px) {
+      height: 69%;
     }
     @include media-max($lg) {
       width: 190%;
@@ -71,7 +79,10 @@
     position: relative;
     z-index: 1;
     @include media-max($xl) {
-      padding: 100px 50px 30px 10px;
+      padding: 140px 50px 30px 10px;
+    }
+    @media (max-width: 1024px) and (max-height: 800px) {
+      padding: 180px 50px 30px 10px;
     }
     @include media-max($md) {
       background-color: $purpleColor;
@@ -85,6 +96,10 @@
       font-weight: bold;
       font-family: $fontPoppins;
       margin-bottom: 80px;
+      @include media-max($xxll) {
+        font-size: 48px;
+        margin-bottom: 50px;
+      }
       @include media-max($xxl) {
         font-size: 44px;
         margin-bottom: 60px;
@@ -218,6 +233,13 @@
         padding-left: 20px;
         bottom: 34px;
       }
+      
+      @media (max-width: 1024px) and (min-width: 768px) {
+        font-size: 16px;
+        padding-left: 20px;
+        bottom: 34px;
+      }
+
       &::after {
         padding-left: 25px;
         content: attr(data-descr);
@@ -240,6 +262,11 @@
           font-size: 18px;
         }
         @include media-max($md) {
+          top: -8px;
+          font-size: 17px;
+          padding-left: 16px;
+        }
+        @media (max-width: 1024px) and (min-width: 768px) {
           top: -8px;
           font-size: 17px;
           padding-left: 16px;
@@ -272,9 +299,18 @@
         font-size: 11px;
         bottom: 13px;
       }
+      @media (max-width: 1024px) and (min-width: 768px) {
+        left: 18px;
+        font-size: 11px;
+        bottom: 13px;
+      }
       span {
         margin-right: 10px;
         @include media-max($sm) {
+          margin-right: 5px;
+          font-size: 11px;
+        }
+        @media (max-width: 1024px) and (min-width: 768px) {
           margin-right: 5px;
           font-size: 11px;
         }
