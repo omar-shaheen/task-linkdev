@@ -30,13 +30,15 @@ if (addToFavorite) {
 }
 
 let btnShowShare = document.querySelectorAll(".btn-share");
-btnShowShare.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    // console.log(e.target.parentNode.nextElementSibling);
-    e.target.parentNode.nextElementSibling.classList.toggle("showing");
+if (btnShowShare) {
+  btnShowShare.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      // console.log(e.target.parentNode.nextElementSibling);
+      e.target.parentNode.nextElementSibling.classList.toggle("showing");
+    });
   });
-});
+}
 
 // Define Overlay For All
 let bodyOverlay = document.querySelector("body");
@@ -63,11 +65,12 @@ function closeMenuNav() {
   divBG.classList.remove("showing");
 }
 
-var mixer = mixitup(".mixing", {
+mixitup('.mixing', {
+	animation: {
+    effects: 'fade',
+    duration: 600
+  },
   selectors: {
-    target: ".mix",
-  },
-  animation: {
-    duration: 300,
-  },
+    target: '.mix'
+  }
 });
