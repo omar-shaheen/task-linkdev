@@ -67,13 +67,13 @@
           flex: 0 0 100%;
         }
         p.sup-title {
-          font-size: 20px;
+          font-size: 25px;
           font-family: $fontPoppins;
           font-weight: 700;
           text-transform: uppercase;
-          margin-bottom: 40px;
+          margin-bottom: 0;
           @include media-max($lg) {
-            margin-bottom: 20px;
+            margin-bottom: 0;
           }
           &.purple-color {
             color: $purpleColor;
