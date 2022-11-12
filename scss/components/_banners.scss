@@ -1,5 +1,16 @@
 .section-banner {
   height: 100vh;
+  @include media-max($md) {
+    height: 85vh;
+  }
+
+  @media (max-width: 1024px) and (max-height: 1366px) {
+    height: 70vh;
+  }
+
+  @media (max-width: 580px) and (max-height: 900px) {
+    height: 100vh;
+  }
 }
 .banner-slider {
   height: 100%;
@@ -8,11 +19,33 @@
     background-color: #fff;
     .bg-decore {
       position: absolute;
-      top: -181.84px;
-      right: -300px;
+      top: -270px;
+      right: -250px;
       width: 1000px;
-      height: 100%;
+      /* height: 100%;*/
       animation: 5.5s linear infinite spinner;
+      // @include mediaApplePro($maxWidth, $hLand1, $wLand1, $hPortrait, $wPortrait) {
+      @media (max-width: 1440px) and (max-height: 900px) {
+        width: 700px;
+      }
+      @media (max-width: 1280px) and (max-height: 950px) {
+        width: 800px;
+      }
+      @media (max-width: 834px) and (max-height: 1112px) {
+        width: 800px;
+      }
+      @media (max-width: 1024px) and (max-height: 1366px) {
+        width: 800px;
+      }
+      // @include media-max($xll) {
+      //   width: 700px;
+      // }
+      // @include media-max($lg) {
+      //   width: 800px;
+      // }
+      // @include minMax($ipadPro, $lg) {
+      //   width: 700px;
+      // }
     }
     .slide-item {
       display: flex;
@@ -22,8 +55,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 50%;
-        flex: 0 0 50%;
+        max-width: 45%;
+        flex: 0 0 auto;
         padding-left: 15px;
         @include media-max($lg) {
           max-width: 100%;
@@ -53,30 +86,45 @@
           position: relative;
           .decore-title-banner {
             position: absolute;
-            right: 0;
-            top: 50px;
+            right: -60px;
+            top: 36px;
             z-index: -1;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             @include media-max($lg) {
               width: 60%;
+              right: 150px;
+              opacity: 0.6;
+            }
+            @include media-max($sm) {
+              top: 18px;
+              right: 80px;
             }
           }
           h2 {
             font-family: $fontPoppins;
-            font-size: 75px;
+            font-size: 70px;
             font-weight: bold;
             color: $darkBlueColor;
-            height: 190px;
+            height: 151px;
             white-space: wrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            letter-spacing: -2.68px;
+            @include media-max($xxl) {
+              font-size: 60px;
+              height: 130px;
+            }
+            @include media-max($xl) {
+              font-size: 50px;
+              height: 108px;
+            }
             @include media-max($lg) {
               font-size: 55px;
               height: 122px;
             }
             @include media-max($sm) {
-              font-size: 35px;
-              height: 76px;
+              font-size: 34px;
+              height: 75px;
             }
           }
         }
@@ -87,6 +135,8 @@
           line-height: 34px;
           font-weight: 400;
           margin-bottom: 40px;
+          height: 100px;
+          overflow: hidden;
           @include media-max($sm) {
             font-size: 14px;
             line-height: 24px;
@@ -159,8 +209,8 @@
         }
       }
       .slide-img {
-        max-width: 50%;
-        flex: 0 0 50%;
+        max-width: 55%;
+        flex: 0 0 auto;
         height: 100%;
         display: flex;
         align-items: end;
@@ -175,18 +225,26 @@
         }
         img {
           // height: 85%;
-          max-width: 100%;
+          // max-width: 100%;
           transition: all 0.4s linear;
+          height: 93%;
+          position: relative;
+          @include media-max($xl) {
+            height: 80%;
+          }
+          @include media-max($md) {
+            height: auto;
+            width: 100%;
+          }
         }
       }
     }
 
-    &.swiper-slide-active .decore-title-banner {
-      // width: 100% !important;
+    &.swiper-slide img {
+      transform: translate(-50px, 0px);
     }
-
     &.swiper-slide-active img {
-      transform: translate(50px, -0px);
+      transform: translate(0px, 0px);
     }
   }
 }

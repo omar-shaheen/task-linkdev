@@ -37,7 +37,7 @@
       li {
         a {
           font-size: 17px;
-          margin-right: 40px;
+          margin-right: 50px;
           color: $linksColor;
           font-weight: 500;
           @include media-max($xl) {
@@ -91,7 +91,7 @@
     align-items: center;
     a {
       font-size: 17px;
-      margin-right: 40px;
+      margin-right: 50px;
       color: $linksColor;
       @include media-max($md) {
         font-size: 14px;
