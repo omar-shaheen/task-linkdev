@@ -138,3 +138,12 @@ function closeMenuNav() {
   headerNavMenu.classList.remove("showing");
   divBG.classList.remove("showing");
 }
+
+var mixer = mixitup(".mixing", {
+  selectors: {
+      target: '.mix'
+  },
+  animation: {
+      duration: 300
+  }
+});
