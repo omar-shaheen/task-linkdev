@@ -96,11 +96,9 @@
     border-radius: 4px;
     overflow: hidden;
     opacity: 0;
-    pointer-events: none;
     visibility: hidden;
     &.showing {
       opacity: 1;
-      pointer-events: all;
       visibility: visible;
     }
     a {
