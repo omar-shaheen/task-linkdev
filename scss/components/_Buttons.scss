@@ -1,13 +1,14 @@
 .btn-more {
   padding: 20px 100px;
-  color: #fff;
+  color: #000;
   background-color: $orangeColor;
   display: inline-block;
   border-radius: 10px;
   font-size: 18px;
   font-family: $fontOpenSans;
+  font-weight: 600;
   &:hover {
-    color: #fff;
+    color: #000;
     transform: scale(1.01) translateY(-5px);
   }
 

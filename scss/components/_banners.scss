@@ -153,6 +153,7 @@
             display: inline-block;
             font-family: $fontOpenSans;
             font-size: 18px;
+            font-weight: 600;
             background-color: $orangeColor;
             border-radius: 10px;
             -webkit-border-radius: 10px;
@@ -160,7 +161,7 @@
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
             box-shadow: 0 20px 70px rgba($color: #f1a501, $alpha: 15%);
-            color: #fff;
+            color: #000;
             padding: 1rem 1.2rem;
             margin-right: 50px;
             &:hover {

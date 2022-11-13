@@ -61,7 +61,7 @@
     &:hover,
     &.mixitup-control-active {
       background-color: $ActiveBgBtnShuffleColor;
-      color: #fff;
+      color: #14183e;
     }
 
     @include media-max($lg) {
