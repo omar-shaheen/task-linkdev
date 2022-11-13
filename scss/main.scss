@@ -1,10 +1,12 @@
+// vendors
+@import 'vendors/bootstrap/bootstrap.scss';
+@import 'vendors/swipper/swiper.scss';
+
 // utilities
 @import "utilities/variables";
 @import "utilities/helperCalsses";
 @import "utilities/media-query";
 
-// vendors
-// @import 'vendors/';
 
 // base
 // @import 'base/reset';
