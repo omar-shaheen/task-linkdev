@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body * {
+  text-align: right !important;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0 !important;
+}
+
+#getting_started .header {
+  left: auto;
+  right: 310px;
+}
+
+#documenter_content.active #getting_started .header {
+  left: auto;
+  right: 0;
+}
+
+#documenter_sidebar {
+  left: auto;
+  right: 0px;
+}
+
+#documenter_content {
+  left: 18px;
+  right: 330px;
+}
+
+#documenter_content.active {
+  right: 0px;
+}
+
+#documenter_content ol li,
+#documenter_content ul li {
+  margin-left: 0;
+  margin-right: 36px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  direction: ltr;
+  text-align: left !important;
+}
+
+#documenter_content h3,
+#documenter_content h6 {
+  font-size: 16px;
+  margin: 18px 0;
+  font-weight: 700;
+}
+
+#documenter_content h3 {
+  font-size: 26px;
+}
+
+#documenter_content p,
+#documenter_sidebar ul a,
+#documenter_content h5,
+#documenter_content h2,
+#documenter_content ul li {
+  font-weight: 700;
+}
+
+#documenter_content p strong {
+  display: inline-block;
+}
+
+.dir_ltr {
+  direction: ltr !important;
+  text-align: left !important;
+  font-weight: bold;
+}
