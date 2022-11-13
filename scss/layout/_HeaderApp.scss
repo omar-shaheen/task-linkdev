@@ -13,17 +13,15 @@
 
   .logo {
     img {
-      max-height: 50px;
-    }
-  }
-  @include media-max($md) {
-    .logo img {
-      max-height: 40px;
-    }
-  }
-  @include media-max($xs) {
-    .logo img {
-      max-height: 30px;
+      border-radius: 10px;
+      @include media-max($md) {
+        width: 100px;
+        height: auto;
+      }
+      @include media-max($xs) {
+        width: 90px;
+        height: auto;
+      }
     }
   }
 
